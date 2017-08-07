@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "dependencies": {
+    "pg-promise": "^6.3.7"
+  }
+}
