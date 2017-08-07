@@ -1,7 +1,9 @@
 const app = require('express')()
 const pgp = require('pg-promise')()
-
+const cors = require('cors')
 const db = pgp('postgres://localhost:5432/adventure-time');
+
+app.use(cors())
 
 app.get('/characters', (req, res) => {
   db.any('SELECT id, name FROM characters')
